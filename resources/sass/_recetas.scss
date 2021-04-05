@@ -3,6 +3,10 @@ body {
     background-color: #f4f0f0;
 }
 
+trix-editor {
+    min-height: 400px;
+}
+
 .bg-primary .navbar-brand {
     color: white;
     font-family: $font-family-sans-serif;

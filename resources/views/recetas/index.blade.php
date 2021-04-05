@@ -21,18 +21,17 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($recetas as $receta)
             <tr>
-                <td scope="row"></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td scope="row">Pizza</td>
-                <td>Comida Rapida</td>
+                <td scope="row">{{$receta->titulo}}</td>
+                <td>{{$receta->categoria->nombre}}</td>
                 <td>
-                    actions
+                    <a href="" class='btn btn-outline-danger mr-1'>Eliminar</a>
+                    <a href="{{ route('recetas.edit', ['receta' => $receta->id]) }}" class='btn btn-outline-info mr-1'>Editar</a>
+                    <a href="{{ route('recetas.show', ['receta' => $receta->id]) }}" class='btn btn-success mr-1'>Mostrar</a>
                 </td>
             </tr>
+            @endforeach
         </tbody>
     </table>
   </div>

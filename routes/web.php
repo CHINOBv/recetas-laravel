@@ -25,5 +25,11 @@ Route::get('/recetas/create', [Recetacontroller::class, 'create'])->name('receta
 
 Route::post('/recetas', [Recetacontroller::class, 'store'])->name('recetas.store');
 
+Route::get("/recetas/{receta}", [Recetacontroller::class, 'show'])->name('recetas.show');
+
+Route::get('recetas/{receta}/edit', [Recetacontroller::class, 'edit'])->name('recetas.edit');
+
+Route::put('/recetas/{receta}', [Recetacontroller::class, 'update'])->name('recetas.update');
+
 Auth::routes();
 
